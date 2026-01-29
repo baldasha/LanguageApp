@@ -23,9 +23,10 @@ sealed class Destinations() {
     object ProfileScreen : Destinations()
 
     @Serializable
-    data class LanguageSelectScreen(
-        val onClick : () -> Unit
-    ) : Destinations()
+    object OnBoardingLanguageSelectScreen : Destinations()
+
+    @Serializable
+    object ProfileLanguageSelectScreen : Destinations()
 
     @Serializable
     object  ImagePicker : Destinations()

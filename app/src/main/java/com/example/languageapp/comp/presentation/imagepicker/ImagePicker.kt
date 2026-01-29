@@ -4,7 +4,6 @@ import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -41,7 +40,6 @@ import com.example.languageapp.R
 import com.example.languageapp.comp.presentation.profile.Buttons
 import com.example.languageapp.ui.theme.ButtonBlue
 import com.example.languageapp.ui.theme.DarkBackground
-import com.example.languageapp.ui.theme.InterFont
 import com.example.notesappsignup.presentation.signIn.UiEvent
 import kotlinx.coroutines.flow.collectLatest
 

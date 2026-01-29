@@ -101,4 +101,8 @@ dependencies {
     implementation("io.coil-kt.coil3:coil-compose")
     implementation("io.coil-kt.coil3:coil-compose-core")
 
+    implementation("androidx.glance:glance:1.0.0-alpha05")
+    implementation("androidx.glance:glance-appwidget:1.0.0-alpha05")
+    implementation("androidx.glance:glance-material3:1.0.0-alpha05")
+
 }

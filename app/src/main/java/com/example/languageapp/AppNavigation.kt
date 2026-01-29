@@ -66,10 +66,19 @@ fun AppNavigation(
                         }
                     },
                     onLanguageSelect = {
-                        navController.navigate(Destinations.LanguageSelectScreen(onClick = {
-                            navController.navigate(Destinations.SignInScreen)
-                        })) {
+                        navController.navigate(Destinations.OnBoardingLanguageSelectScreen) {
                             popUpTo(Destinations.OnBoardingScreen) {
+                                inclusive = true
+                            }
+                        }
+                    }
+                )
+            }
+            composable<Destinations.OnBoardingLanguageSelectScreen> {
+                LanguageSelectScreen(
+                    onSubmit = {
+                        navController.navigate(Destinations.SignInScreen){
+                            popUpTo(Destinations.OnBoardingScreen){
                                 inclusive = true
                             }
                         }
@@ -121,23 +130,18 @@ fun AppNavigation(
                         navController.navigate(Destinations.ImagePicker)
                     },
                     onLanguageChange = {
-                        navController.navigate(Destinations.LanguageSelectScreen(
-                            onClick = {
-                                navController.navigate(Destinations.ProfileScreen){
-                                    popUpTo(Destinations.ProfileScreen){
-                                        inclusive = true
-                                    }
-                                }
-                            }
-                        ))
+                        navController.navigate(Destinations.ProfileLanguageSelectScreen)
                     }
                     )
             }
-            composable<Destinations.LanguageSelectScreen> {
-                val args = it.toRoute<Destinations.LanguageSelectScreen>()
+            composable<Destinations.ProfileLanguageSelectScreen> {
                 LanguageSelectScreen(
                     onSubmit = {
-                        args.onClick
+                        navController.navigate(Destinations.MainScreen){
+                            popUpTo(Destinations.MainScreen){
+                                inclusive = true
+                            }
+                        }
                     }
                 )
             }

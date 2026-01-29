@@ -7,3 +7,11 @@ data class TopUser(
     val points : Int,
     @DrawableRes val avatar : Int,
 )
+
+data class WidgetTopUser(
+    val number : String,
+    val name : String,
+    val points : Int,
+    val avatar : Int,
+    val isSelected : Boolean
+)
